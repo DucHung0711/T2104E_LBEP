@@ -1,15 +1,16 @@
 #include<stdio.h>
 #include<math.h>
 int main(){
-	float von,nam,thudc,year;
+	int von,nam,thudc;
 	printf("Nhap von: ");
-	scanf("%f",&von);
-	printf("Nhp nam:");
-	scanf("%f",&nam);
-	year=0;
+	scanf("%d",&von);
+	printf("Nhap nam:");
+	scanf("%d",&nam);
+	int year=0;
 	while(year<nam){
-		von = von + von * (8/100);
+		von = von + von * 8/100;
 		year = year + 1;
 	}
-	printf("Lai thu duoc la:%f",von);
+	printf("Lai thu duoc la:%d",von);
 }
+
