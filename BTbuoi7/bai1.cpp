@@ -7,7 +7,7 @@ int main(){
 		scanf("%d",&n);
 	}
 	int i;
-	int a[i];
+	int a[n];
 	for(i=0;i<n;i++){
 			printf("Nhap phan tu thu %d la: ",i);
 			scanf("%d",&a[i]);
