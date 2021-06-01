@@ -15,29 +15,32 @@ void xuatmang(int a[], int n){
 		printf("%5d ",a[i]);		
 	}
 }
-int timkiem(int a[], int n){
+void timkiem(int a[], int n){
 		int i,x,s1=0;
 		printf("\nNhap x: ");
 		scanf("%d",&x);
 		for(i=0;i<n;i++){
 			if(a[i]==x){
-				return i;
+				printf("Trong mang co so %d",x);
+				break;
 			}
-		return 0;
 	}	
 }
 int main(){
+	
+//	int b[max],n,i;
+//	nhapmang(b,n);
+//	xuatmang(b,n);
 	int n;
 	scanf("%d",&n);
 	int a[n];
 	for(int i=0;i<n;i++){
 		scanf("%d",&a[i]);
 	}
-	
-	
-	if(timkiem(b,n)==i){
-		printf("%d co trong mang",i);
-	}else{
-		printf("%d khong co trong mang",i);
-	}
+	timkiem(a,n);
+//	if(timkiem(b,n)==i){
+//		printf("%d co trong mang",i);
+//	}else{
+//		printf("%d khong co trong mang",i);
+//	}
 }
