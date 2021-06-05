@@ -13,22 +13,21 @@ int main(){
 	int x;
 	printf("Nhap x: ");
 	scanf("%d",&x);	
-	int hieuMin=abs(a[0]-x);
-	int count=0;
-	int b[n];
-	for(i=0;i<n;i++){		
-		if(abs(a[i]-x)<hieuMin){
-			hieuMin=abs(a[i]-x);
-		}
-		
-		if(abs(a[i]-x)==hieuMin){
-			count++;
-			count=a[i];
+	int max=x;
+	for(i=0;i<n;i++){
+		if(a[i]<x){
+			max=a[i];
+			break;
 		}
 	}
-	if(count==0){
-		printf("Mang khong co so x");
+	if(max==x){
+		printf("Mang khong co so nho hon\n");
 	}else{
-		printf("So gan x nhat la %5d",count);
-	}	
+		for(i=0;i<n;i++){
+			if(a[i]>max && a[i]<x){
+				max=a[i];
+			}
+		}
+	}
+	printf("So gan %d nhat la %d\n",x,max);
 }
